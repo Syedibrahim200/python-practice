@@ -11,5 +11,4 @@ for number in numbers:
      
 print("Original list =",numbers)
 print("Even numbers are =",even_numbers)
-print("Odd numbers are =",odd_numbers)
 
