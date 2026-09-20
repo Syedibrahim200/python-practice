@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DriveCraft Auto</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#0b0b0d;color:#f4f4f4;font-family:Arial,sans-serif}a{text-decoration:none;color:inherit}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(120deg,transparent 40%,#ff3d0030),repeating-linear-gradient(115deg,#fff 0 1px,transparent 1px 90px);opacity:.04;pointer-events:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;padding:20px 7%;display:flex;justify-content:space-between;align-items:center;background:#0b0b0ddd;border-bottom:1px solid #ffffff12;backdrop-filter:blur(15px)}.brand{font-weight:900;font-style:italic;letter-spacing:.08em}.brand i{color:#ff4d00}.links a{margin-left:24px;color:#aaa}
+.hero{min-height:100vh;padding:140px 7% 70px;display:flex;align-items:center;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:650px;height:650px;border-radius:50%;right:-220px;top:100px;background:radial-gradient(circle,#ff3d0038,transparent 68%);animation:pulse 4s infinite}
+.content{position:relative;z-index:2;max-width:820px}.eyebrow{color:#ff5a1f;font-weight:900;letter-spacing:.2em}.hero h1{font-size:clamp(4rem,10vw,9rem);font-style:italic;line-height:.8;margin:20px 0;letter-spacing:-.07em}.hero p{color:#aaa;max-width:580px;line-height:1.7}.btn{display:inline-block;margin-top:20px;padding:14px 24px;background:#ff4d00;border-radius:4px;font-weight:900;transform:skew(-8deg);transition:.3s}.btn:hover{box-shadow:0 0 35px #ff4d0066;transform:skew(-8deg) translateY(-5px)}
+section{padding:90px 7%}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{padding:30px;min-height:240px;border:1px solid #ffffff12;background:linear-gradient(145deg,#151518,#0d0d0f);transition:.35s}.service:hover{border-color:#ff4d00;transform:translateY(-8px)}.service span{font-size:3rem;color:#ff4d00}.service h3{font-size:1.5rem}.service p{color:#999;line-height:1.6}.numbers{display:flex;gap:70px;flex-wrap:wrap;border-top:1px solid #ffffff15;padding-top:40px}.num b{font-size:3rem;color:#ff4d00}.num small{display:block;color:#888}.book{border:1px solid #ff4d00;background:#ff4d0010;padding:45px;text-align:center}.book button{padding:14px 22px;border:0;background:#ff4d00;color:#fff;font-weight:900;cursor:pointer}
+.back{position:fixed;bottom:20px;left:20px;z-index:30;background:#f4f4f4;color:#0b0b0d;padding:11px 16px;border-radius:4px;font-weight:900;font-size:13px}
+@keyframes pulse{50%{transform:scale(1.15);opacity:.65}}@media(max-width:800px){.links{display:none}.grid{grid-template-columns:1fr}.hero h1{font-size:4rem}}
+</style></head><body>
+<nav><div class="brand">DRIVE<i>CRAFT</i> AUTO</div><div class="links"><a href="#services">Services</a><a href="#book">Book</a></div></nav>
+<a class="back" href="../index.html">← Portfolio</a>
+<header class="hero"><div class="content"><div class="eyebrow">PERFORMANCE · SERVICE · DETAIL</div><h1>BUILT<br>TO MOVE.</h1><p>Premium automobile servicing for people who care about how their machine feels, sounds and performs.</p><a class="btn" href="#services">Explore services</a></div></header>
+<section id="services"><h2 style="font-size:3.5rem;font-style:italic">WHAT WE DO</h2><div class="grid">
+<div class="service"><span>01</span><h3>Performance</h3><p>Diagnostics, tuning and performance-focused maintenance.</p></div>
+<div class="service"><span>02</span><h3>Detailing</h3><p>Interior restoration, exterior correction and ceramic protection.</p></div>
+<div class="service"><span>03</span><h3>Care Plans</h3><p>Scheduled maintenance packages designed around your vehicle.</p></div>
+</div></section>
+<section><div class="numbers"><div class="num"><b>12+</b><small>Years experience</small></div><div class="num"><b>2.4K</b><small>Cars serviced</small></div><div class="num"><b>4.9/5</b><small>Demo rating</small></div></div></section>
+<section id="book"><div class="book"><h2 style="font-size:2.7rem">Ready for the next drive?</h2><button onclick="alert('Demo: service booking form would open here.')">Request a service</button></div></section>
+</body></html>

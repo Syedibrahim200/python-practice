@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nestora Realty</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: #07110f;
+        color: #e9efe9;
+        font-family: Arial, sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      nav {
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px 6%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #07110faa;
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid #ffffff14;
+      }
+      .brand {
+        letter-spacing: 0.2em;
+        font-weight: 900;
+      }
+      .links a {
+        margin-left: 24px;
+        color: #b8c7bf;
+      }
+      .hero {
+        min-height: 100vh;
+        padding: 130px 6% 70px;
+        display: flex;
+        align-items: end;
+        position: relative;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, #07110f66, #07110f),
+          radial-gradient(circle at 65% 30%, #5f806d55, transparent 30%),
+          linear-gradient(135deg, #18332a, #07110f);
+      }
+      .hero:before {
+        content: "";
+        position: absolute;
+        inset: 12% 6% 8%;
+        border: 1px solid #ffffff22;
+        border-radius: 35px;
+        transform: perspective(900px) rotateX(3deg);
+        animation: glow 4s infinite;
+      }
+      .content {
+        position: relative;
+        z-index: 2;
+        max-width: 850px;
+      }
+      .eyebrow {
+        letter-spacing: 0.22em;
+        color: #a6c4af;
+        font-size: 0.75rem;
+        padding: 100px;
+      }
+      .hero h1 {
+        font:
+          normal clamp(4rem, 9vw, 8.5rem)/0.82 Georgia,
+          serif;
+        margin: 18px 0;
+      }
+      .hero p {
+        max-width: 620px;
+        color: #b6c4bc;
+        line-height: 1.8;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 14px 22px;
+        border: 1px solid #a6c4af;
+        border-radius: 99px;
+        transition: 0.3s;
+      }
+      .btn:hover {
+        background: #a6c4af;
+        color: #07110f;
+        transform: translateY(-4px);
+      }
+      section {
+        padding: 100px 6%;
+      }
+      .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 30px;
+      }
+      .head h2 {
+        font: normal 3.5rem Georgia;
+        margin: 0;
+      }
+      .head p {
+        color: #9caba4;
+        max-width: 450px;
+      }
+      .properties {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 45px;
+      }
+      .property {
+        min-height: 390px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        border: 1px solid #ffffff15;
+        border-radius: 22px;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(145deg, #203c32, #0b1714);
+        transition: 0.5s;
+      }
+      .property:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 30%, #07110fee);
+      }
+      .property:hover {
+        transform: translateY(-10px);
+        border-color: #a6c4af66;
+      }
+      .property > * {
+        position: relative;
+      }
+      .property h3 {
+        font: normal 1.8rem Georgia;
+        margin: 10px 0;
+      }
+      .meta {
+        color: #a6c4af;
+      }
+      .contact {
+        background: #dce8df;
+        color: #07110f;
+        padding: 55px;
+        border-radius: 25px;
+        text-align: center;
+      }
+      .contact h2 {
+        font: normal 3.3rem Georgia;
+        margin: 0 0 15px;
+      }
+      .contact button {
+        padding: 13px 22px;
+        border: 0;
+        border-radius: 99px;
+        background: #07110f;
+        color: white;
+        font-weight: 800;
+        cursor: pointer;
+      }
+      .back {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 30;
+        background: #dce8df;
+        color: #07110f;
+        padding: 11px 16px;
+        border-radius: 99px;
+        font-weight: 900;
+        font-size: 13px;
+      }
+      @keyframes glow {
+        50% {
+          box-shadow: 0 0 70px #a6c4af18;
+        }
+      }
+      @media (max-width: 800px) {
+        .links {
+          display: none;
+        }
+        .properties {
+          grid-template-columns: 1fr;
+        }
+        .hero h1 {
+          font-size: 4.2rem;
+        }
+        .head {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="brand">NESTORA REALTY</div>
+      <div class="links">
+        <a href="#homes">Homes</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <a class="back" href="../index.html">← Portfolio</a>
+    <header class="hero">
+      <div class="content">
+        <div class="eyebrow">CURATED PROPERTY · COASTAL LIVING</div>
+        <h1>Find a place<br />to become.</h1>
+        <p>
+          Luxury property presentation for modern homes, apartments and
+          investment spaces.
+        </p>
+        <a class="btn" href="#homes">Explore properties</a>
+      </div>
+    </header>
+    <section id="homes">
+      <div class="head">
+        <h2>Selected homes.</h2>
+        <p>
+          Sample listings showing how a premium property business could present
+          its inventory online.
+        </p>
+      </div>
+      <div class="properties">
+        <div class="property">
+          <span class="meta">₹1.85 Cr · 4 BHK</span>
+          <h3>The Palm House</h3>
+          <p>Sea-facing villa · 3,100 sq ft</p>
+        </div>
+        <div class="property">
+          <span class="meta">₹78 L · 3 BHK</span>
+          <h3>Greenline Residence</h3>
+          <p>Modern apartment · 1,850 sq ft</p>
+        </div>
+        <div class="property">
+          <span class="meta">₹1.20 Cr · 4 BHK</span>
+          <h3>North Grove</h3>
+          <p>Garden home · 2,450 sq ft</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="contact">
+        <h2>Let's find your next address.</h2>
+        <button onclick="alert('Demo: property enquiry form would open here.')">
+          Start an enquiry
+        </button>
+      </div>
+    </section>
+  </body>
+</html>

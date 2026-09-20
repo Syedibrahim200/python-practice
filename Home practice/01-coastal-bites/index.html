@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coastal Bites</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Georgia,serif;background:#fff8ec;color:#173b3a}a{text-decoration:none;color:inherit}
+nav{position:fixed;z-index:10;top:0;left:0;right:0;padding:18px 7%;display:flex;justify-content:space-between;background:#fff8ecee;backdrop-filter:blur(12px);border-bottom:1px solid #173b3a18}.brand{font-weight:900;letter-spacing:.1em}.links a{margin-left:22px;font-family:Arial;color:#315c58}
+.hero{min-height:100vh;padding:150px 7% 80px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px;background:radial-gradient(circle at 85% 25%,#f6bd7044,transparent 30%),linear-gradient(135deg,#fff8ec,#e9f5ed)}
+.kicker{font:700 .85rem Arial;letter-spacing:.18em;text-transform:uppercase;color:#c46a35}.hero h1{font-size:clamp(4rem,8vw,8rem);line-height:.82;margin:18px 0;animation:slide 1s}.hero p{font:1.1rem Arial;line-height:1.7;color:#486563;max-width:560px}.cta{display:inline-block;margin-top:18px;padding:15px 22px;background:#173b3a;color:white;border-radius:99px;font-family:Arial;font-weight:800;transition:.3s}.cta:hover{transform:translateY(-5px);background:#c46a35}
+.plate{height:460px;border-radius:50% 50% 42% 42%;background:radial-gradient(circle at 50% 45%,#eaa86b 0 20%,#6b9c67 21% 35%,#e7c48d 36% 45%,#d9a05c 46% 53%,#fef4df 54%);box-shadow:0 35px 70px #173b3a33;animation:float 5s ease-in-out infinite}
+section{padding:90px 7%}.title{font-size:3.2rem;margin:0 0 35px}.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.dish{padding:28px;border-radius:25px;background:white;box-shadow:0 15px 40px #173b3a10;transition:.35s}.dish:hover{transform:translateY(-10px) rotate(-1deg)}.dish b{font-size:1.35rem}.price{float:right;color:#c46a35}.dish p{font:15px Arial;color:#64807d;line-height:1.6}.book{background:#173b3a;color:#fff;border-radius:35px;padding:50px;text-align:center}.book h2{font-size:3rem;margin:0 0 10px}.book button{border:0;padding:13px 20px;border-radius:99px;font-weight:800;cursor:pointer}
+.back{position:fixed;bottom:20px;left:20px;z-index:20;background:#173b3a;color:white;padding:11px 16px;border-radius:99px;font:700 13px Arial;box-shadow:0 10px 30px #173b3a33}
+@keyframes slide{from{opacity:0;transform:translateX(-35px)}to{opacity:1;transform:none}}@keyframes float{50%{transform:translateY(-15px) rotate(2deg)}}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.plate{height:320px}.menu{grid-template-columns:1fr}.links{display:none}}
+</style></head><body>
+<nav><div class="brand">COASTAL BITES</div><div class="links"><a href="#menu">Menu</a><a href="#reserve">Reserve</a></div></nav>
+<a class="back" href="../index.html">← Portfolio</a>
+<header class="hero"><div><div class="kicker">Coastal kitchen · Bhatkal</div><h1>Eat like<br>the coast.</h1><p>Fresh seafood, smoky grills and comforting coastal plates served with a modern touch.</p><a class="cta" href="#menu">View signature dishes</a></div><div class="plate"></div></header>
+<section id="menu"><h2 class="title">Signature menu</h2><div class="menu">
+<div class="dish"><span class="price">₹320</span><b>Coastal Fish Fry</b><p>Crisp local catch, house masala and lemon.</p></div>
+<div class="dish"><span class="price">₹280</span><b>Prawn Ghee Roast</b><p>Rich roasted spices with a buttery finish.</p></div>
+<div class="dish"><span class="price">₹240</span><b>Chicken Sukka</b><p>Slow-cooked coconut, curry leaves and spice.</p></div>
+</div></section>
+<section id="reserve"><div class="book"><h2>Your table is waiting.</h2><p>Demo booking interaction for the portfolio.</p><button onclick="alert('Demo: booking form would open here.')">Book a table</button></div></section>
+<script>
+document.querySelectorAll('section').forEach(s=>{s.style.opacity=0;s.style.transform='translateY(30px)';s.style.transition='.8s'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='none'}}),{threshold:.15});document.querySelectorAll('section').forEach(s=>io.observe(s));
+</script></body></html>

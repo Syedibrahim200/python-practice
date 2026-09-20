@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Urban Glow</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f3eee7;color:#29231f;font-family:Arial,sans-serif}a{text-decoration:none;color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;padding:20px 7%;display:flex;justify-content:space-between;background:#f3eee7dd;backdrop-filter:blur(16px);border-bottom:1px solid #29231f18}.brand{font-family:Georgia;font-size:1.3rem;letter-spacing:.12em}.links a{margin-left:24px;color:#62574f}
+.hero{min-height:100vh;padding:140px 7% 70px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px;background:linear-gradient(135deg,#f3eee7,#e7d6d0)}
+.hero h1{font:normal clamp(4rem,8vw,8rem)/.85 Georgia,serif;margin:15px 0}.hero h1 em{font-style:italic;color:#a96869}.hero p{color:#6b6159;line-height:1.8;max-width:520px}.btn{display:inline-block;margin-top:20px;padding:14px 22px;border:1px solid #29231f;border-radius:50px;transition:.3s}.btn:hover{background:#29231f;color:#fff;transform:translateY(-4px)}
+.portrait{height:560px;border-radius:220px 220px 18px 18px;background:linear-gradient(150deg,#d5b1a6,#8e6560);position:relative;overflow:hidden;box-shadow:25px 25px 0 #c6aaa0;animation:reveal 1.2s ease}.portrait:before{content:"";position:absolute;width:65%;height:85%;left:18%;bottom:-8%;border-radius:50% 50% 10% 10%;background:linear-gradient(160deg,#2b2322,#a27c73 48%,#e1b8aa)}.portrait:after{content:"URBAN GLOW";position:absolute;bottom:22px;left:25px;color:#fff;letter-spacing:.2em;font-size:.7rem}
+section{padding:100px 7%}.intro{text-align:center;max-width:760px;margin:auto}.intro h2{font:normal 4rem Georgia;margin:0 0 20px}.intro p{color:#6b6159;line-height:1.8}.services{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:45px}.item{background:#fffaf5;padding:32px;border:1px solid #29231f14;transition:.4s}.item:hover{transform:translateY(-9px);box-shadow:0 20px 45px #29231f12}.item h3{font:normal 1.8rem Georgia}.item p{color:#71665e;line-height:1.6}.price{color:#a96869;font-weight:800}
+.cta{margin-top:50px;text-align:center;background:#29231f;color:white;padding:55px;border-radius:4px}.cta h2{font:normal 3rem Georgia}.cta button{padding:13px 22px;border:0;border-radius:50px;cursor:pointer}
+.back{position:fixed;bottom:20px;left:20px;z-index:20;background:#29231f;color:white;padding:11px 16px;border-radius:50px;font-weight:800;font-size:13px}
+@keyframes reveal{from{opacity:0;transform:translateY(35px) scale(.96)}to{opacity:1;transform:none}}
+@media(max-width:800px){.links{display:none}.hero{grid-template-columns:1fr}.portrait{height:390px}.services{grid-template-columns:1fr}}
+</style></head><body>
+<nav><div class="brand">URBAN GLOW</div><div class="links"><a href="#services">Services</a><a href="#book">Book</a></div></nav>
+<a class="back" href="../index.html">← Portfolio</a>
+<header class="hero"><div><small style="letter-spacing:.25em;color:#a96869">HAIR · BEAUTY · SELF-CARE</small><h1>Your glow,<br><em>elevated.</em></h1><p>A modern beauty studio concept where clean styling, calm interiors and personal service meet.</p><a class="btn" href="#services">Explore treatments</a></div><div class="portrait"></div></header>
+<section id="services"><div class="intro"><h2>Curated care.</h2><p>Every service is designed to feel personal, polished and effortless.</p></div><div class="services">
+<div class="item"><span class="price">from ₹900</span><h3>Signature Hair</h3><p>Cut, finish and styling tailored to your everyday look.</p></div>
+<div class="item"><span class="price">from ₹700</span><h3>Glow Facial</h3><p>A relaxing facial ritual for a fresh, cared-for finish.</p></div>
+<div class="item"><span class="price">from ₹600</span><h3>Express Styling</h3><p>Quick styling for events, evenings and special days.</p></div>
+<div class="item"><span class="price">from ₹1,500</span><h3>Complete Look</h3><p>Hair and beauty styling planned as one seamless experience.</p></div>
+</div></section>
+<section id="book"><div class="cta"><h2>Make time for yourself.</h2><button onclick="alert('Demo: appointment form would open here.')">Book an appointment</button></div></section>
+</body></html>

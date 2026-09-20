@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SABIQ WEB STUDIO — Portfolio</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+        background: #070a12;
+        color: #eef2ff;
+        overflow-x: hidden;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 7%;
+        background: rgba(7, 10, 18, 0.72);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid #ffffff12;
+      }
+      .logo {
+        font-weight: 900;
+        letter-spacing: 0.12em;
+      }
+      .logo span {
+        color: #6ee7ff;
+      }
+      .nav a {
+        opacity: 0.8;
+        margin-left: 24px;
+      }
+      .nav a:hover {
+        opacity: 1;
+        color: #6ee7ff;
+      }
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 120px 7% 70px;
+        position: relative;
+      }
+      .orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(4px);
+        opacity: 0.45;
+        animation: float 8s ease-in-out infinite;
+      }
+      .o1 {
+        width: 260px;
+        height: 260px;
+        background: #5b5ff7;
+        left: 5%;
+        top: 18%;
+      }
+      .o2 {
+        width: 220px;
+        height: 220px;
+        background: #00d4ff;
+        right: 7%;
+        bottom: 15%;
+        animation-delay: -3s;
+      }
+      .hero h1 {
+        font-size: clamp(3rem, 9vw, 7.5rem);
+        line-height: 0.9;
+        margin: 0;
+        letter-spacing: -0.07em;
+        animation: rise 1s ease both;
+      }
+      .hero p {
+        max-width: 720px;
+        margin: 28px auto;
+        color: #aeb8d0;
+        font-size: 1.1rem;
+        animation: rise 1s 0.15s ease both;
+      }
+      .btn {
+        display: inline-block;
+        padding: 13px 20px;
+        border-radius: 999px;
+        background: #eef2ff;
+        color: #070a12;
+        font-weight: 800;
+        transition: 0.3s;
+      }
+      .btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 35px #6ee7ff33;
+      }
+      section {
+        padding: 90px 7%;
+      }
+      .section-title {
+        font-size: clamp(2rem, 5vw, 4rem);
+        margin: 0 0 35px;
+        letter-spacing: -0.04em;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+      }
+      .card {
+        position: relative;
+        overflow: hidden;
+        min-height: 300px;
+        padding: 30px;
+        border: 1px solid #ffffff12;
+        border-radius: 28px;
+        background: linear-gradient(145deg, #101522, #0a0d15);
+        transition: 0.5s;
+        transform: translateY(35px);
+        opacity: 0;
+      }
+      .card.show {
+        transform: none;
+        opacity: 1;
+      }
+      .card:hover {
+        transform: translateY(-10px) rotateX(1deg);
+        border-color: #6ee7ff66;
+      }
+      .tag {
+        display: inline-block;
+        padding: 7px 10px;
+        border-radius: 99px;
+        background: #ffffff0b;
+        color: #aeb8d0;
+        font-size: 0.78rem;
+      }
+      .card h3 {
+        font-size: 2rem;
+        margin: 25px 0 10px;
+      }
+      .card p {
+        color: #aeb8d0;
+        line-height: 1.7;
+      }
+      .arrow {
+        position: absolute;
+        right: 26px;
+        bottom: 25px;
+        font-size: 1.7rem;
+        color: #6ee7ff;
+      }
+      .footer {
+        padding: 45px 7%;
+        color: #8994ad;
+        border-top: 1px solid #ffffff12;
+      }
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes float {
+        50% {
+          transform: translate(25px, -30px) scale(1.08);
+        }
+      }
+      @media (max-width: 760px) {
+        .nav a {
+          display: none;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          padding-top: 130px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">SABIQ <span>WEB STUDIO</span></div>
+      <div><a href="#work">Work</a><a href="#about">About</a></div>
+    </nav>
+    <header class="hero">
+      <div class="orb o1"></div>
+      <div class="orb o2"></div>
+      <div>
+        <div class="tag">AI-assisted • custom • responsive</div>
+        <h1>
+          Websites that<br /><span style="color: #6ee7ff">feel alive.</span>
+        </h1>
+        <p>
+          I design fast, modern business websites with strong visual identities,
+          smooth animation and mobile-first layouts.
+        </p>
+        <a class="btn" href="#work">Explore Demo Websites ↓</a>
+      </div>
+    </header>
+    <section id="work">
+      <h2 class="section-title">Four different worlds.</h2>
+      <div class="grid">
+        <a class="card" href="01-coastal-bites/index.html"
+          ><span class="tag">01 · Restaurant</span>
+          <h3>Coastal Bites</h3>
+          <p>
+            Warm coastal dining identity with a cinematic food-first experience.
+          </p>
+          <div class="arrow">↗</div></a
+        >
+        <a class="card" href="02-drivecraft-auto/index.html"
+          ><span class="tag">02 · Automobile</span>
+          <h3>DriveCraft Auto</h3>
+          <p>
+            Dark performance-garage theme built for service, trust and bookings.
+          </p>
+          <div class="arrow">↗</div></a
+        >
+        <a class="card" href="03-urban-glow/index.html"
+          ><span class="tag">03 · Salon</span>
+          <h3>Urban Glow</h3>
+          <p>
+            Editorial fashion-beauty look with elegant motion and premium
+            typography.
+          </p>
+          <div class="arrow">↗</div></a
+        >
+        <a class="card" href="04-nestora-realty/index.html"
+          ><span class="tag">04 · Real Estate</span>
+          <h3>Nestora Realty</h3>
+          <p>
+            Luxury property presentation with cinematic cards and glassmorphism.
+          </p>
+          <div class="arrow">↗</div></a
+        >
+      </div>
+    </section>
+    <section id="about">
+      <h2 class="section-title">Built to sell.</h2>
+      <p
+        style="
+          max-width: 760px;
+          color: #aeb8d0;
+          font-size: 1.15rem;
+          line-height: 1.8;
+        "
+      >
+        These are fictional demo brands created for portfolio presentation.
+        Replace the sample contact details with your real WhatsApp, email and
+        client information before sending the portfolio to prospects.
+      </p>
+    </section>
+    <footer class="footer">© 2026 SABIQ WEB STUDIO · Demo portfolio</footer>
+    <script>
+      const cards = [...document.querySelectorAll(".card")];
+      const io = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("show");
+          }),
+        { threshold: 0.15 },
+      );
+      cards.forEach((c) => io.observe(c));
+    </script>
+  </body>
+</html>
